@@ -8,7 +8,8 @@ import { JokesComponent } from './jokes/jokes.component';
 const routes: Routes = [
   { path: '', component: BlogComponent },
   { path: 'users', component: UsersComponent },
-  { path: 'jokes', component: JokesComponent }
+  { path: 'jokes', component: JokesComponent },
+  { path: 'jokes/:id', component: JokesComponent }
 ];
 
 @NgModule({

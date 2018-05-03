@@ -1,3 +1,4 @@
+import { JokeService } from './services/jokeservice/joke-service.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -18,7 +19,7 @@ import { JokesComponent } from './jokes/jokes.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [JokeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

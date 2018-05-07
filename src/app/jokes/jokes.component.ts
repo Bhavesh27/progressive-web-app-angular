@@ -7,18 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JokesComponent implements OnInit {
   title = 'Chuck Norris';
-  jokes = getJokes()
-          .then(jokes => jokes.value)
-          .catch( err => console.log(err));
-  constructor() { }
+  jokes = ['there is one for you', 'there is another one for you'];
+  constructor() {
+    // this.jokes = this.getJokes();
+    this.getJokes();
+  }
 
   ngOnInit() {
+    // console.log(this.jokes);
+  }
+
+  getJokes() {
+    return fetch('http://api.icndb.com/jokes/random/10')
+           .then((response: any) => {
+              return response.json();
+           })
+           .then((jokes: any) => {
+             console.log(jokes.value);
+           });
   }
 
 }
 
-async function getJokes() {
-  const res = await fetch ('http://api.icndb.com/jokes/random/10');
-  const data = await res.json();
-  return data;
-}
+
+

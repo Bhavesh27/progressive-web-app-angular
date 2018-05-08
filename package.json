@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot"
   },
   "engines": {
     "node": "9.8.0",
@@ -37,7 +37,7 @@
     "zone.js": "^0.8.14",
     "@angular/cli": "6.0.0",
     "@angular/compiler-cli": "^6.0.0",
-    "typescript": "~2.8.0"
+    "typescript": "~2.7.1"
   },
   "devDependencies": {
     "@angular/language-service": "^6.0.0",

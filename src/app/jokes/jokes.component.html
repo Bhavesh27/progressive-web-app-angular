@@ -1,6 +1,7 @@
 <p>
  {{ title }} jokes works!
 </p>
+<input type="number" [(ngModel)='jokeCount'] />
 <ul>
     <li *ngFor="let joke of jokes">{{ joke }}</li> 
 </ul>
